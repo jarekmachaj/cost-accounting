@@ -27,7 +27,7 @@ You should see console output and new console window with client app running wit
 
 ![image](https://github.com/user-attachments/assets/6b856822-848b-456a-b924-a7d780ef505c)
 
-* CostAccounting.Core:
+CostAccounting.Core:
 Framework foundation with:
 - In-memory data store
 - Generic repository pattern
