@@ -19,6 +19,7 @@ dotnet run
 ## After successful startup:
 * A server console will appear
 * Proxy configuration connects the React client to the ASP.NET API
+  
 You should see console output and new console window with client app running with proxy (go to [http://localhost:12773](https://localhost:12773/) in that case):
 ![image](https://github.com/user-attachments/assets/f99a8be1-473b-463b-bb07-2ecfac993879)
 
@@ -55,7 +56,7 @@ namespace CostAccounting.Data.Extensions
 ```
 
 # Web UI
-There is a simple proxy mechanism to access API from client app:
+There is a simple proxy mechanism to access API from client app (there is a small ui bug in selling form that i did not fixed):
 
 ![image](https://github.com/user-attachments/assets/4d1e971b-e2b3-4533-8604-1aadd7531757)
 
