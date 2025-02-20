@@ -2,7 +2,9 @@
 I have updated SDK for .Net 9.0 and updated visual studio after installation. To build the app, I have used client + server template for VS. I hope it is not a problem amd will run using standard "F5" on your machine.
 
 Solution:
+
 ![image](https://github.com/user-attachments/assets/6b856822-848b-456a-b924-a7d780ef505c)
+
 CostAccounting.Core - basic framework with inmemory store and simple generic repository. Solution is using in memory dictionary, which does not modify data - you can provide different inputs for same data
 CostAccounting.Data - data definition and service providers to register repositories / import data
 CostAccounting.Seervices - simple services and dtos used by controllers
