@@ -1,0 +1,6 @@
+@CostAccounting.Server_HostAddress = http://localhost:5269
+
+GET {{CostAccounting.Server_HostAddress}}/api/Newdata
+Accept: application/json
+
+###

@@ -1,0 +1,162 @@
+﻿#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.main-table,
+.sell-form,
+.sale-results {
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #1a202c;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #2d3748;
+    color: white;
+}
+
+th {
+    background-color: #2d3748;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #2d3748;
+}
+
+.summary-row {
+    background-color: #4a5568;
+    border-top: 2px solid #2d3748;
+}
+
+.summary-row:hover {
+    background-color: #4a5568;
+}
+
+.spacer {
+    height: 1rem;
+    background-color: transparent;
+}
+
+.spacer:hover {
+    background-color: transparent;
+}
+
+.spacer td {
+    border: none;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.sale-results {
+    background-color: #1a202c;
+    padding: 1rem;
+}
+
+.sale-results h2 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.result-table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: #2d3748;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.result-table th[colSpan="5"] {
+    background-color: #4a5568;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.revenue-summary {
+    color: white;
+    padding: 1rem;
+    background-color: #4a5568;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.table-container,
+.form-container {
+    width: 100%;
+    background: #1a202c;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.sell-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+    padding: 1.5rem;
+    background-color: #2d3748;
+    border-radius: 0.5rem;
+    align-items: center;
+    margin: 0;
+}
+
+.sell-form select,
+.sell-form input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #4a5568;
+    border-radius: 0.25rem;
+    background-color: #1a202c;
+    color: white;
+}
+
+.sell-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #4a5568;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.sell-form button:hover {
+    background-color: #2d3748;
+}
