@@ -9,7 +9,8 @@ dotnet build
 cd CostAccounting.Server
 dotnet run
 ```
-you should see console output and new console window with client app running with proxy (go to [http://localhost:12773](https://localhost:12773/) in that case)
+you should see console output and new console window with client app running with proxy (go to [http://localhost:12773](https://localhost:12773/) in that case):
+
 ![image](https://github.com/user-attachments/assets/f99a8be1-473b-463b-bb07-2ecfac993879)
 
 
@@ -45,6 +46,7 @@ namespace CostAccounting.Data.Extensions
 ```
 
 There is a simple proxy mechanism to access API from client app:
+
 ![image](https://github.com/user-attachments/assets/e99cd4ff-1c08-4b74-a992-25cc6517dc66)
 
 # If it does not work
