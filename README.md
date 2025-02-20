@@ -14,7 +14,7 @@ you should see console output and new console window with client app running wit
 ![image](https://github.com/user-attachments/assets/f99a8be1-473b-463b-bb07-2ecfac993879)
 
 
-Solution:
+# Solution:
 
 ![image](https://github.com/user-attachments/assets/6b856822-848b-456a-b924-a7d780ef505c)
 
@@ -45,12 +45,13 @@ namespace CostAccounting.Data.Extensions
 }
 ```
 
+# Web UI
 There is a simple proxy mechanism to access API from client app:
 
 ![image](https://github.com/user-attachments/assets/4d1e971b-e2b3-4533-8604-1aadd7531757)
 
 
-# If it does not work
+# If it does not work - CLI
 When client code does not work, please use generated "script.ps1" to access rest API - it will give you CLI UI:
 
 ![image](https://github.com/user-attachments/assets/ca6ee9c9-5629-4e76-abfc-d13c894edd71)
