@@ -27,13 +27,9 @@ You should see console output and new console window with client app running wit
 
 ![image](https://github.com/user-attachments/assets/6b856822-848b-456a-b924-a7d780ef505c)
 
-CostAccounting.Core:
-Framework foundation with:
-- In-memory data store
-- Generic repository pattern
-- Immutable data structure implementation
+* CostAccounting.Core: framework foundations with In-memory data store, generic repository pattern, immutable data structure implementation
 * CostAccounting.Data - data definition and service providers to register repositories / import data
-* CostAccounting.Seervices - simple services and dtos used by controllers
+* CostAccounting.Services - simple services and dtos used by controllers
 * CostAccounting.client -  simple client code that pulls data with fetch
 * CostAccounting.Server - .Net server (ASP .Net api)
 * Stocks.Tests - xUnit test project
