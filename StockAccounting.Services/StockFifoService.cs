@@ -4,7 +4,7 @@ using StockAccounting.Services.Interfaces;
 
 namespace CostAccounting.Services;
 
-public class StockService(IStockRepository stockRepository) : IStockService
+public class StockFifoService(IStockRepository stockRepository) : IStockFifoService
 {
     public async Task<IList<StockLotDetailsDto>> GetAllStockLotDetails()
     {

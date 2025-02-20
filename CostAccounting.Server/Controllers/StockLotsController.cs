@@ -8,9 +8,9 @@ namespace CostAccounting.Server.Controllers;
 [Route("api/[controller]")]
 public class StockLotsController : ControllerBase
 {
-    private readonly IStockService stockService;
+    private readonly IStockFifoService stockService;
 
-    public StockLotsController(IStockService stockService)
+    public StockLotsController(IStockFifoService stockService)
     {
         this.stockService = stockService;
     }

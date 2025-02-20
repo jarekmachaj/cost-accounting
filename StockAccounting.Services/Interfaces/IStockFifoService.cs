@@ -2,7 +2,7 @@
 
 namespace StockAccounting.Services.Interfaces;
 
-public interface IStockService
+public interface IStockFifoService
 {
     Task<IList<StockLotDto>> GetAllStockLots();
     Task<IList<StockLotDetailsDto>> GetAllStockLotDetails();

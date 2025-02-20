@@ -8,12 +8,12 @@ namespace Stocks.Tests;
 public class StockServiceScenarioTests
 {
     private readonly Mock<IStockRepository> _stockRepositoryMock;
-    private readonly StockService _stockService;
+    private readonly StockFifoService _stockService;
 
     public StockServiceScenarioTests()
     {
         _stockRepositoryMock = new Mock<IStockRepository>();
-        _stockService = new StockService(_stockRepositoryMock.Object);
+        _stockService = new StockFifoService(_stockRepositoryMock.Object);
     }
 
     [Fact]

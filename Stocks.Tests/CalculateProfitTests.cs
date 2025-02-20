@@ -4,7 +4,7 @@ namespace Stocks.Tests;
 
 public class CalculateProfitTests
 {
-    private readonly StockService _stockService = new StockService(null);
+    private readonly StockFifoService _stockService = new StockFifoService(null);
 
     [Fact]
     public void CalculateProfit_PositiveProfit_ReturnsCorrectValue()
