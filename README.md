@@ -29,10 +29,9 @@ You should see console output and new console window with client app running wit
 
 * CostAccounting.Core:
 Framework foundation with:
-*         In-memory data store
-*         Generic repository pattern
-
-Immutable data structure implementation
+- In-memory data store
+- Generic repository pattern
+- Immutable data structure implementation
 * CostAccounting.Data - data definition and service providers to register repositories / import data
 * CostAccounting.Seervices - simple services and dtos used by controllers
 * CostAccounting.client -  simple client code that pulls data with fetch
