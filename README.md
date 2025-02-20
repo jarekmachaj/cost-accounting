@@ -10,6 +10,7 @@ Solution:
 * CostAccounting.Seervices - simple services and dtos used by controllers
 * CostAccounting.client - client code (react)
 * CostAccounting.Server - .Net server (ASP .Net api)
+* Stocks.Tests - xUnit test project
 
 
 All data is harrdcoded inside `ApplyHardcodedData` method:
