@@ -9,7 +9,7 @@ dotnet build
 cd CostAccounting.Server
 dotnet run
 ```
-you should see console output and new console window with client app running with proxy (go to [http://localhost:12773](https://localhost:12773/) in that case):
+You should see console output and new console window with client app running with proxy (go to [http://localhost:12773](https://localhost:12773/) in that case):
 
 ![image](https://github.com/user-attachments/assets/f99a8be1-473b-463b-bb07-2ecfac993879)
 
