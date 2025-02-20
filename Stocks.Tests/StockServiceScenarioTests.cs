@@ -24,10 +24,9 @@ public class StockServiceScenarioTests
         //  - 150 shares purchased at $30/share in February
         //  - 120 shares purchased at $10/share in March
         // Sell 200 shares at $35/share.
-        // Expected FIFO sale:
-        //   Sold: all 100 from January + 100 from February (partial)
-        //   Remaining: 50 from February and full 120 from March.
-        // Sold cost basis = (100*20 + 100*30) / 200 = 5000/200 = $25.
+        //   Sold: 100 January + 100 February
+        //   Remaining: 50 February + 120 March.
+        //   basis = (100*20 + 100*30) / 200 = 5000/200 = $25.
 
         var ticker = "TEST";
         var currentPrice = 35m;
@@ -63,13 +62,12 @@ public class StockServiceScenarioTests
     public async Task SellStocks_MicrosoftCostBasisCalculation_Test2()
     {
         // Scenario 2:
-        // For example, you purchased:
         //  - 100 shares of MSFT at $20/share in January
         //  - 200 shares of MSFT at $30/share in March
-        // If you sell 150 shares at $40/share in April:
-        // Expected FIFO sale: 100 shares from January + 50 shares from March.
-        // Sold cost basis = (100*20 + 50*30)/150 = (2000 + 1500)/150 = 3500/150 ≈ 23.33
-        // Expected profit = (40 - 23.33)*150 ≈ $2500.
+        // 50 shares at $40/share in April:
+        // 100 shares from January + 50 shares from March.
+        // basis = (100*20 + 50*30)/150 = (2000 + 1500)/150 = 3500/150 ≈ 23.33
+        // profit = (40 - 23.33)*150 ≈ $2500.
 
         var ticker = "MSFT";
         var currentPrice = 40m;
@@ -102,15 +100,14 @@ public class StockServiceScenarioTests
     public async Task SellStocks_MultipleLotsSpanningAll_ReturnsCorrectOutputs_Test3()
     {
         // Scenario 3:
-        // Using the same three lots as in test 1:
         //  - 100 shares at $20 (January)
         //  - 150 shares at $30 (February)
         //  - 120 shares at $10 (March)
-        // Sell 300 shares at $35/share.
-        // Expected FIFO sale:
-        //   Sold: 100 from Jan + 150 from Feb + 50 from Mar = 300 shares.
-        //   Remaining: 120 - 50 = 70 shares from March.
-        // Sold cost basis = (100*20 + 150*30 + 50*10) / 300 = (2000 + 4500 + 500)/300 = 7000/300 ≈ 23.33.
+        // Sell 300 shares at $35
+        // sale:
+        //   Sold: 100 Jan + 150 Feb + 50 Mar = 300 shares.
+        //   Remaining: 120 - 50 = 70
+        //   basis = (100*20 + 150*30 + 50*10) / 300 = (2000 + 4500 + 500)/300 = 7000/300 ≈ 23.33.
 
         var ticker = "TEST";
         var currentPrice = 35m;

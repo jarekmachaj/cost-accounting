@@ -35,10 +35,10 @@ public class StockServiceTests
         var profit = _stockService.CalculateProfit(15, currentPrice, result.SoldStocks.CostBasisPerShare);
 
         // Assert
-        Assert.Equal(profit, result.Profit); // Revenue based on provided current price
+        Assert.Equal(profit, result.Profit); 
         Assert.Empty(result.RemainingStocks.StockLots);
         Assert.Equal(2, result.SoldStocks.StockLots.Count);
-        Assert.Equal(116.67m, Math.Round(result.SoldStocks.CostBasisPerShare, 2)); // (10*100 + 5*150)/15
+        Assert.Equal(116.67m, Math.Round(result.SoldStocks.CostBasisPerShare, 2));
     }
 
     [Fact]
