@@ -39,3 +39,6 @@ When client code does not work, please use generated "script.ps1" to access rest
 
 ![image](https://github.com/user-attachments/assets/ca6ee9c9-5629-4e76-abfc-d13c894edd71)
 
+# If it still does not work (maybe proxy issue)
+Please contact me, or use provided unit tests that covers your scenario:
+`StockServiceScenarioTests`
