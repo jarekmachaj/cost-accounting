@@ -21,7 +21,7 @@ you should see console output and new console window with client app running wit
 * CostAccounting.Core - basic framework with inmemory store and simple generic repository. Solution is using in memory dictionary, which does not modify data - you can provide different inputs for same data
 * CostAccounting.Data - data definition and service providers to register repositories / import data
 * CostAccounting.Seervices - simple services and dtos used by controllers
-* CostAccounting.client - client code (react)
+* CostAccounting.client -  simple client code that pulls data with fetch
 * CostAccounting.Server - .Net server (ASP .Net api)
 * Stocks.Tests - xUnit test project
 
