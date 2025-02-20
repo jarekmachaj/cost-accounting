@@ -47,7 +47,8 @@ namespace CostAccounting.Data.Extensions
 
 There is a simple proxy mechanism to access API from client app:
 
-![image](https://github.com/user-attachments/assets/e99cd4ff-1c08-4b74-a992-25cc6517dc66)
+![image](https://github.com/user-attachments/assets/4d1e971b-e2b3-4533-8604-1aadd7531757)
+
 
 # If it does not work
 When client code does not work, please use generated "script.ps1" to access rest API - it will give you CLI UI:
