@@ -11,14 +11,19 @@ public class StockRepository : GenericRepository<StockLot, Guid>, IStockReposito
 
     public async Task<IEnumerable<StockLot>> GetAllStockLots()
     {
-        // Order to simulate FIFO ordering
         var stockLots = await GetAllAsync();
-        return stockLots.OrderBy(l => l.Id).OrderByDescending(x => x.CreatedOn);
+        return stockLots.OrderBy(l => l.Id).OrderBy(x => x.CreatedOn);
     }
 
     public async Task<IEnumerable<StockLot>> GetStockLotByTicker(string ticker)
     {
         var stockLots = await GetFilteredAsync(x => x.Ticker.Equals(ticker, StringComparison.InvariantCultureIgnoreCase));
-        return stockLots;
+        return stockLots.OrderBy(x => x.CreatedOn);
+    }
+
+    public async Task<IEnumerable<StockLot>> GetFilteredStockLotsAsync(Func<StockLot, bool> predicate)
+    {
+        var filteredEntities = await GetFilteredAsync(predicate);
+        return filteredEntities.OrderBy(x => x.CreatedOn);
     }
 }

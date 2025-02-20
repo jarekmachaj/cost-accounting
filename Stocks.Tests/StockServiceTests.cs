@@ -28,7 +28,7 @@ public class StockServiceTests
             new() { Id = Guid.NewGuid(), Ticker = ticker, Shares = 5, PricePerShare = 150m, CreatedOn = DateTime.Now }
         };
 
-        _stockRepositoryMock.Setup(x => x.GetFilteredAsync(It.IsAny<Func<StockLot, bool>>())).ReturnsAsync(stockLots);
+        _stockRepositoryMock.Setup(x => x.GetFilteredStockLotsAsync(It.IsAny<Func<StockLot, bool>>())).ReturnsAsync(stockLots);
 
         // Act
         var result = await _stockService.SellStocks(ticker, 15, currentPrice);
@@ -53,7 +53,7 @@ public class StockServiceTests
             new() { Id = Guid.NewGuid(), Ticker = ticker, Shares = 5, PricePerShare = 150m, CreatedOn = DateTime.Now }
         };
 
-        _stockRepositoryMock.Setup(x => x.GetFilteredAsync(It.IsAny<Func<StockLot, bool>>()))
+        _stockRepositoryMock.Setup(x => x.GetFilteredStockLotsAsync(It.IsAny<Func<StockLot, bool>>()))
             .ReturnsAsync(stockLots);
 
         // Act
@@ -77,7 +77,7 @@ public class StockServiceTests
             new() { Id = Guid.NewGuid(), Ticker = ticker, Shares = 10, PricePerShare = 100m, CreatedOn = DateTime.Now }
         };
 
-        _stockRepositoryMock.Setup(x => x.GetFilteredAsync(It.IsAny<Func<StockLot, bool>>()))
+        _stockRepositoryMock.Setup(x => x.GetFilteredStockLotsAsync(It.IsAny<Func<StockLot, bool>>()))
             .ReturnsAsync(stockLots);
 
         // Act & Assert

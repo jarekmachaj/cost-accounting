@@ -38,7 +38,7 @@ public class StockServiceScenarioTests
             };
 
         _stockRepositoryMock
-            .Setup(x => x.GetFilteredAsync(It.IsAny<Func<StockLot, bool>>()))
+            .Setup(x => x.GetFilteredStockLotsAsync(It.IsAny<Func<StockLot, bool>>()))
             .ReturnsAsync(stockLots);
 
         // Act:
@@ -78,7 +78,7 @@ public class StockServiceScenarioTests
             };
 
         _stockRepositoryMock
-            .Setup(x => x.GetFilteredAsync(It.IsAny<Func<StockLot, bool>>()))
+            .Setup(x => x.GetFilteredStockLotsAsync(It.IsAny<Func<StockLot, bool>>()))
             .ReturnsAsync(stockLots);
 
         // Act
@@ -119,7 +119,7 @@ public class StockServiceScenarioTests
             };
 
         _stockRepositoryMock
-            .Setup(x => x.GetFilteredAsync(It.IsAny<Func<StockLot, bool>>()))
+            .Setup(x => x.GetFilteredStockLotsAsync(It.IsAny<Func<StockLot, bool>>()))
             .ReturnsAsync(stockLots);
 
         // Act

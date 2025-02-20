@@ -6,4 +6,5 @@ public interface IStockRepository : IGenericRepository<StockLot, Guid>
 {
     Task<IEnumerable<StockLot>> GetAllStockLots();
     Task<IEnumerable<StockLot>> GetStockLotByTicker(string ticker);
+    Task<IEnumerable<StockLot>> GetFilteredStockLotsAsync(Func<StockLot, bool> predicate);
 }

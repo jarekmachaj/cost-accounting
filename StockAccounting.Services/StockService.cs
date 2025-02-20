@@ -8,24 +8,18 @@ public class StockService(IStockRepository stockRepository) : IStockService
 {
     public async Task<IList<StockLotDetailsDto>> GetAllStockLotDetails()
     {
-        var lots = await stockRepository.GetAllAsync();
+        var lots = await stockRepository.GetAllStockLots();
 
-        // Group the lots by ticker
         var groupedLots = lots.GroupBy(lot => lot.Ticker);
 
         var detailsList = new List<StockLotDetailsDto>();
 
         foreach (var group in groupedLots)
         {
-            // Convert each StockLot to a StockLotDto
             var stockLotDtos = group
                 .Select(lot => lot.ToDto())
                 .ToList();
-
-            // Calculate the cost basis per share using the helper method
             decimal costBasisPerShare = CalculateCostBasisPerShare(stockLotDtos);
-
-            // Create the details record for this group
             detailsList.Add(new StockLotDetailsDto(stockLotDtos, costBasisPerShare));
         }
 
@@ -84,7 +78,7 @@ public class StockService(IStockRepository stockRepository) : IStockService
             throw new ArgumentException("Number of shares to sell must be positive", nameof(sharesToSell));
 
         // Retrieve all lots for the given ticker, sorted by purchase date (FIFO)
-        var lots = await stockRepository.GetFilteredAsync(lot =>
+        var lots = await stockRepository.GetFilteredStockLotsAsync(lot =>
             lot.Ticker.Equals(ticker, StringComparison.InvariantCultureIgnoreCase));
 
         var orderedLots = lots.OrderBy(x => x.CreatedOn).ToList();
