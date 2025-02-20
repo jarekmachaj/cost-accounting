@@ -62,7 +62,7 @@ There is a simple proxy mechanism to access API from client app (there is a smal
 
 
 # If it does not work - CLI
-When client code does not work, please use generated "script.ps1" to access rest API - it will give you CLI UI:
+When client code does not work, please use generated `cost-accounting\scripts\start.ps1` to access rest API - it will give you simple CLI UI:
 
 ![image](https://github.com/user-attachments/assets/ca6ee9c9-5629-4e76-abfc-d13c894edd71)
 
