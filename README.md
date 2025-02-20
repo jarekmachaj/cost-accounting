@@ -1,6 +1,18 @@
 # App description
 I have updated SDK for .Net 9.0 and updated visual studio after installation. To build the app, I have used client + server template for VS. I hope it is not a problem amd will run using standard "F5" on your machine.
 
+# How to run 
+```bash
+git clone https://github.com/jarekmachaj/cost-accounting.git
+cd cost-accounting
+dotnet build
+cd CostAccounting.Server
+dotnet run
+```
+you should see console output and new console window with client app running with proxy (go to http://localhost:12773 in that case)
+![image](https://github.com/user-attachments/assets/f99a8be1-473b-463b-bb07-2ecfac993879)
+
+
 Solution:
 
 ![image](https://github.com/user-attachments/assets/6b856822-848b-456a-b924-a7d780ef505c)
